@@ -1,0 +1,37 @@
+/* My App */
+.App {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  font-family: var(--main-font);
+}
+
+/* Title */
+.title {
+  color: var(--clr-white);
+  margin: 25px 0px;
+  opacity: 0.9;
+}
+
+/* Icon */
+.option-icon {
+  color: var(--clr-grey-5);
+  font-size: 1.7rem;
+  cursor: pointer;
+  transition: 0.25s;
+  transform-origin: center;
+}
+.option-icon:hover {
+  transform: scale(1.1) rotate(50deg);
+}
+
+/* ==================== */
+/* Javascript classes */
+.hide {
+  opacity: 0;
+}

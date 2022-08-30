@@ -1,0 +1,127 @@
+/* Timer */
+.timer-container {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(140deg, #011629, #022342);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: 70px 0px 90px 0px;
+  cursor: pointer;
+}
+
+.timer {
+  width: 94%;
+  height: 94%;
+  border-radius: inherit;
+  background-color: #011629;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.countdown {
+  font-size: 4.5rem;
+  font-weight: 600;
+  color: var(--clr-grey-10);
+  margin: 10px 0px;
+}
+
+.timer-state {
+  color: var(--clr-grey-10);
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 12px;
+}
+
+.timer-icon {
+  color: var(--clr-grey-10);
+  opacity: 0.5;
+  font-size: 1.5rem;
+}
+
+/* Progress */
+.progress-container {
+  width: 95%;
+  height: 95%;
+  border-radius: inherit;
+  position: absolute;
+  z-index: -1;
+}
+.progress-container svg {
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform: rotate(-85deg);
+}
+.progress {
+  fill: none;
+  stroke: var(--main-clr);
+  stroke-width: 6;
+}
+
+/* **************** */
+/* Media Query */
+@media screen and (max-height: 590px) {
+  /* Timer */
+  .timer-container {
+    max-width: 260px;
+    max-height: 260px;
+  }
+
+  .timer {
+    width: 93%;
+    height: 93%;
+  }
+
+  /* countdown value */
+  .countdown {
+    font-size: 3.5rem;
+  }
+  .timer-state {
+    font-size: 1.25rem;
+  }
+
+  /* Progress bar */
+  .progress-container {
+    width: 98%;
+    height: 98%;
+    left: 10px;
+    bottom: 15px;
+  }
+  .progress {
+    transform: scale(0.77);
+    position: absolute;
+  }
+}
+@media screen and (min-height: 590px) and (max-height: 600px) {
+  /* countdown value */
+  .countdown {
+    font-size: 3.5rem;
+  }
+  .timer-state {
+    font-size: 1.25rem;
+  }
+  /* Progress bar */
+  .progress-container {
+    width: 100%;
+    height: 100%;
+    left: 5px;
+    bottom: 25px;
+  }
+  .progress {
+    transform: scale(0.9) scaleX(0.92);
+    position: absolute;
+  }
+}
+
+/* ======================= */
+/* Javascript classes */
+.on {
+  opacity: 0.9;
+}
